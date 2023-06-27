@@ -1,0 +1,25 @@
+{
+  "name": "ashell",
+  "displayName": "ashell",
+  "description": "A-Shell Basic Grammar",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ashell",
+      "aliases": ["A-Shell", "ashell"],
+      "extensions": [".bas",".bp"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ashell",
+      "scopeName": "source.ashell",
+      "path": "./syntaxes/ashell.tmLanguage.json"
+    }]
+  }
+}
