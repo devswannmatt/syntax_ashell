@@ -6,7 +6,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.ashell",
-					"match": "\\b(if|else|elseif|endif|xcall|call|as|XCALL|CALL|while|for|foreach|next|do|loop|repeat|return|switch|case|endswitch|exit|dimx|ordmap|defstruct|endstruct|define|DEFINE|PROGRAM)\\b"
+					"match": "\\b(if|and|else|elseif|endif|xcall|call|as|XCALL|CALL|while|for|foreach|next|do|loop|repeat|return|switch|case|endswitch|exit|dimx|ordmap|defstruct|endstruct|define|DEFINE|PROGRAM)\\b"
 				}
 			]
 		},
