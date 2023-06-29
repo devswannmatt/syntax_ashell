@@ -16,7 +16,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.function.ashell",
-					"match": "\\b(?i)(isam|using|read(?=\\s)|ucs|lcs|abs|pad|space|null|auto_extend|left\\(|right\\(|val\\(|erf\\()\\b"
+					"match": "\\b(?i)(isam|using|open|close|read(?=\\s)|ucs|lcs|abs|pad|space|null|auto_extend|miamex|left\\(|right\\(|(?<=\\s)val\\(|erf\\(|lookup\\()\\b"
 				}
 			]
 		},
