@@ -8,7 +8,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.ashell",
-					"match": "\\b(?i)(if|else|elseif|endif|xcall|call|as|while|for|foreach|next|do|loop|repeat|return|switch|case|default|endswitch|exit)\\b"
+					"match": "\\b(?i)(if|and|else|elseif|endif|xcall|call|as|while|for|foreach|next|do|loop|repeat|return|switch|case|default|endswitch|exit)\\b"
 				}
 			]
 		},
@@ -16,7 +16,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.function.ashell",
-					"match": "\\b(?i)(isam|using|read|ucs|lcs|abs|pad|space|null|auto_extend|left\\(|right\\(|val\\()\\b"
+					"match": "\\b(?i)(isam|using|read(?=\\s)|ucs|lcs|abs|pad|space|null|auto_extend|left\\(|right\\(|val\\(|erf\\()\\b"
 				}
 			]
 		},
