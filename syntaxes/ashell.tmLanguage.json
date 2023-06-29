@@ -8,22 +8,30 @@
 			"patterns": [
 				{
 					"name": "keyword.control.ashell",
-					"match": "\\b(?i)(if|else|elseif|endif|xcall|call|as|while|for|foreach|next|do|loop|repeat|return|switch|case|endswitch|exit|dimx|ordmap|defstruct|endstruct|define)\\b"
+					"match": "\\b(?i)(if|else|elseif|endif|xcall|call|as|while|for|foreach|next|do|loop|repeat|return|switch|case|default|endswitch|exit)\\b"
 				}
 			]
 		},
 		"keywords_other": {
 			"patterns": [
 				{
-					"name": "keyword.other.ashell",
+					"name": "entity.name.function.ashell",
 					"match": "\\b(?i)(isam|using|read|ucs|lcs|abs|pad|space|null|auto_extend|left\\(|right\\(|val\\()\\b"
+				}
+			]
+		},
+		"vartypes": {
+			"patterns": [
+				{
+					"name": "entity.name.variable.ashell",
+					"match": "\\b(?i)(map1|map2|map3|map4|map5|map6|map7|map8|map9|defstruct|endstruct|define|dimx|ordmap)\\b"
 				}
 			]
 		},
 		"compiler": {
 			"patterns": [
 				{
-					"name": "support.constant.ashell",
+					"name": "keyword.other.ashell",
 					"match": "\\b(?i)(pragma|include|include'once|extern|auto_extern)\\b"
 				}
 			]
@@ -69,14 +77,6 @@
 			"name": "comment.line.ashell",
 			"begin": "!",
 			"end": "\n"
-		},
-		"vartypes": {
-			"patterns": [
-				{
-					"name": "entity.name.variable.ashell",
-					"match": "\\b(?i)(map1|map2|map3|map4|map5|map6|map7|map8|map9)\\b"
-				}
-			]
 		}
 	},
 	"patterns": [
