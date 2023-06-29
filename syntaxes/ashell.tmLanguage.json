@@ -1,12 +1,14 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "A-Shell",
+	"scopeName": "source.ashell",
+	"fileTypes": [ "bas", "bp" ],
 	"repository": {
 		"keywords": {
 			"patterns": [
 				{
 					"name": "keyword.control.ashell",
-					"match": "\\b(if|and|else|elseif|endif|xcall|call|as|XCALL|CALL|while|for|foreach|next|do|loop|repeat|return|switch|case|endswitch|exit|dimx|ordmap|defstruct|endstruct|define|DEFINE|PROGRAM)\\b"
+					"match": "\\b(?i)(if|else|elseif|endif|xcall|call|as|while|for|foreach|next|do|loop|repeat|return|switch|case|endswitch|exit|dimx|ordmap|defstruct|endstruct|define)\\b"
 				}
 			]
 		},
@@ -14,15 +16,24 @@
 			"patterns": [
 				{
 					"name": "keyword.other.ashell",
-					"match": "\\b(isam|using|read|function|endfunction|exitfunction|ucs|lcs|abs|pad|space|null|auto_extend|left|right|val\\()\\b"
+					"match": "\\b(?i)(isam|using|read|ucs|lcs|abs|pad|space|null|auto_extend|left\\(|right\\(|val\\()\\b"
 				}
 			]
 		},
-		"keywords_compiler": {
+		"compiler": {
 			"patterns": [
 				{
-					"name": "keyword.other.ashell",
-					"match": "\\b(pragma|include|include'once|extern|auto_extern)\\b"
+					"name": "support.constant.ashell",
+					"match": "\\b(?i)(pragma|include|include'once|extern|auto_extern)\\b"
+				}
+			]
+		},
+		"functions": {
+			"name": "entity.name.function.ashell",
+			"patterns": [
+				{
+					"name": "entity.name.function.ashell",
+					"match": "\\b(?i)(function|endfunction|exitfunction)\\b"
 				}
 			]
 		},
@@ -57,33 +68,26 @@
 		"comments": {
 			"name": "comment.line.ashell",
 			"begin": "!",
-			"end": "\n",
-			"patterns": [
-				{
-					"name": "constant.character.escape.ashell",
-					"match": "\\\\."
-				}
-			]
+			"end": "\n"
 		},
 		"vartypes": {
-			"name": "storage.type.ashell",
 			"patterns": [
 				{
-					"name": "constant.character.escape.ashell",
-					"match": "\\b(map1|map2|map3|map4|map5|map6|map7|map8|map9|MAP1|MAP2|MAP3|MAP4|MAP5|MAP6|MAP7|MAP8|MAP9)\\b"
+					"name": "entity.name.variable.ashell",
+					"match": "\\b(?i)(map1|map2|map3|map4|map5|map6|map7|map8|map9)\\b"
 				}
 			]
 		}
 	},
-	"scopeName": "source.ashell",
 	"patterns": [
 		{ "include": "#keywords" },
 		{ "include": "#keywords_other" },
-		{ "include": "#keywords_compiler" },
+		{ "include": "#compiler" },
 		{ "include": "#log" },
 		{ "include": "#strings" },
 		{ "include": "#numbers" },
 		{ "include": "#comments" },
-		{ "include": "#vartypes" }
+		{ "include": "#vartypes" },
+		{ "include": "#functions"}
 	]
 }
